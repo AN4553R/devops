@@ -5,3 +5,12 @@ stages:
 
 before_script:
     - apt-get update
+
+dummy:
+    stage: deploy
+    only:
+        variables:
+        - $FOO == "bar"
+    script:
+        - echo
+      
